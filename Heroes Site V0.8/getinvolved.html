@@ -37,11 +37,15 @@ Heroes for Students
 			
 		<div id="banner">
 			<span class="left"><img src="../images/heroes_for_students.jpg" alt="Heroes" /></span>
-			<span class="right"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="SEBZMFJN5LXNJ">
-					<input type="image" src="../images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			</span>
+			<!-- The class="right" which encompassed the form could not pass validation, however applying the class to the form and removing the span tag surrounding the form passed validation -->
+			<form class="right" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<!-- Closed 3 non-closed input tags below -->
+					<input type="hidden" name="cmd" value="_s-xclick" />
+					<input type="hidden" name="hosted_button_id" value="SEBZMFJN5LXNJ" />
+					<!-- 'border="0"' is a common issue since PayPal doesn't offer it in a HTML5 Compliant form -->
+					<input type="image" src="../images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					<!-- Form closing tag was missing, I assumed it would be ended on line 47 below -->
+			</form>
 		</div>
 
 		<nav>
@@ -57,6 +61,7 @@ Heroes for Students
 		
 		
 		<div id="content">
+		<!-- On line 65 & 67, the <p> tags cannot have any block elements nested, and won't pass validation. Without viewing styling ramnifications, you may elect to use <br/> tags, or designating a div for the <h2> text -->
 			<p>
 				<h2>Get involved with HEROES For Students</h2>
 			</p>
@@ -71,10 +76,10 @@ Heroes for Students
 						If you want to give back to the community and inspire students to be the best they can be, please click on the image to the right to register to be a HERO so we can match you with a classroom.
 					</td>
 					
-			</a>
+			<!-- removed stray </a> tag -->
 					<td class="image">
-						<a href"https://docs.google.com/forms/d/16wNY1nucA8LtDWsh47Hyw1D_C_qRm3X8ep8vY7Xl3I4/viewform" onclick="window.open(this.href);return false;">
-						<img src="../images/heroes.png" alt="Register as a hero!" />
+						<a href="https://docs.google.com/forms/d/16wNY1nucA8LtDWsh47Hyw1D_C_qRm3X8ep8vY7Xl3I4/viewform" onclick="window.open(this.href);return false;">
+						<img src="../images/heroes.png" alt="Register as a hero!" /></a>
 					</td>
 				</tr>
 				<tr>
@@ -87,8 +92,9 @@ Heroes for Students
 						As a teacher you know your students have so much potential. If you would like to expose your students to a diversity of careers and further engage them in their course content by connecting it to real-world application, please click on the image to the right to register as a teacher so we can match you with a HERO.				
 					</td>
 					<td class="image">
+						<!-- Added Alt Attribute for image tag below and Closed open <a> tag -->
 						<a href="https://docs.google.com/forms/d/1f0jYjr9KVJoqA9sQj2H8Z9-9AcBOxreDoBAdcQMoLig/viewform" onclick="window.open(this.href);return false;">
-						<img src="images/Teacher-and-Child-1913.png" />
+						<img src="images/Teacher-and-Child-1913.png" alt="Register as a Teacher Today"/></a>
 					</td>
 				</tr>
 				
@@ -99,12 +105,13 @@ Heroes for Students
 				</tr>
 				<tr>
 					<td class="getinvolved">
-						There are so many ways you can help today&#8217s youth. If you love what we&#8217re doing and want to volunteer your skills and expertise to helping us grow our impact at HEROES For Students, please click on the image to the right to register as a volunteer to help us grow our organization.  We are always looking for passionate individuals who want to effect positive change in the realm of education.				
+					<!-- Removed 2 instances of '&#8217' below and replaced each with an apostrophe (we're) and (today's) -->
+						There are so many ways you can help today's youth. If you love what we're doing and want to volunteer your skills and expertise to helping us grow our impact at HEROES For Students, please click on the image to the right to register as a volunteer to help us grow our organization.  We are always looking for passionate individuals who want to effect positive change in the realm of education.				
 					</td>
 					<td class="image">
-																	
-							<a href="mailto:info@heroesforstudents.orgsubject=Contact%20me&body=I%20would%20like%20to%20get%20information%20about%20volunteering%20">
-							<img src="../images/Volunteering-SVG.png" />
+							<!-- Added Alt Attribute for image tag below, also escaped the '&' character with '&amp;', and closed the open <a> tag -->
+							<a href="mailto:info@heroesforstudents.orgsubject=Contact%20me&amp;body=I%20would%20like%20to%20get%20information%20about%20volunteering%20">
+							<img src="../images/Volunteering-SVG.png" alt="Register as a Volunteer Today"/></a>
 					</td>
 					
 				</tr>
