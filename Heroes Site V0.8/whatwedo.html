@@ -40,11 +40,15 @@ Heroes for Students
 			
 		<div id="banner">
 			<span class="left"><img src="../images/heroes_for_students.jpg" alt="Heroes" /></span>
-			<span class="right"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="SEBZMFJN5LXNJ">
-					<input type="image" src="../images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			</span>
+			<!-- The class="right" which encompassed the form could not pass validation, however applying the class to the form and removing the span tag surrounding the form passed validation -->
+			<form class="right" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<!-- Closed 3 non-closed input tags below -->
+					<input type="hidden" name="cmd" value="_s-xclick" />
+					<input type="hidden" name="hosted_button_id" value="SEBZMFJN5LXNJ" />
+					<!-- 'border="0"' is a common issue since PayPal doesn't offer it in a HTML5 Compliant form -->
+					<input type="image" src="../images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					<!-- Form closing tag was missing, I assumed it would be ended on line 51 below -->
+			</form>
 		</div>
 
 		<nav>
@@ -60,14 +64,16 @@ Heroes for Students
 		
 		<div id="multi">
 		<p>		
+			<!-- Added missing '=' after "img src", Also added alt attribute to image element and changed transposed end anchor tag (<a/>) to </a> -->
 			<a href="http://player.vimeo.com/video/121274765" class="html5lightbox" 
-			data-width="1000" data-height="600" title="Animated Hero"> <img src"../images/videoprofessionals.jpg"/> <a/>
+			data-width="1000" data-height="600" title="Animated Hero"><img src="../images/videoprofessionals.jpg" alt="Video Professionals JPG Img"/></a>
 		</p>
 		</div>		
 		<div id="multi2">
 		<p>	
+			<!-- Added missing '=' after "img src" Also added alt attribute to image element and changed transposed end anchor tag (<a/>) to </a> -->
 			<a href="http://player.vimeo.com/video/90655699" class="html5lightbox" 
-			data-width="1000" data-height="600" title="About Heroes"> <img src"../images/whatprofessionalsdo.jpg"/> <a/>
+			data-width="1000" data-height="600" title="About Heroes"><img src="../images/whatprofessionalsdo.jpg" alt="What Professionals Do Img"/></a>
 		</p>	
 		</div>
 		<br>
@@ -91,7 +97,7 @@ Heroes for Students
 			<p>CHANGE: We seek to develop business-education partnerships that will create transformational change in ways that businesses are able to 
 			successfully grow, connect with, and retain their customers through community support. We also value ways these relationships will bring 
 			transformational change to students&apos; education, so students are able to critically think and apply their education to their future college 
-			and career opportunities.<p>
+			and career opportunities.</p><!-- Changed "p" tag to "/p" tag  -->
 			<br/>
 			<br/>
 			
@@ -114,8 +120,8 @@ Heroes for Students
 			
 			
 				
-			</div>
 		</div>
+		<!-- Removed stray end div tag from this line-->
 		
 		<div id="footer">
 			<p>
