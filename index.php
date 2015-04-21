@@ -37,8 +37,8 @@
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="SEBZMFJN5LXNJ">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
 				<br />
 				<br />
@@ -54,14 +54,15 @@
 
 <br/>
 <br/>
+			<div>
 				<!-- video -->
-				<iframe src="//player.vimeo.com/video/90655699" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe src="//player.vimeo.com/video/90655699" width="720" height="405" ></iframe>
 				<br />
-			</p>
-			<p>
+			</div>
+			<div>
 				<h2>Click below to get involved!</h2>
-			</p>
-			<p>
+			</div>
+			<div>
 				<div id="registermenu2">
 					<form action="heroregistration.php">
 						<input type="submit" value="Register as a HERO!">
@@ -70,7 +71,7 @@
 						<input type="submit" value="Register as a Teacher!">
 					</form>
 				</div>
-			</p>
+			</div>
 		</div>
 		
 		<!-- Load Footer -->
